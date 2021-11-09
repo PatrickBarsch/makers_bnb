@@ -75,14 +75,44 @@
           1,
           null,
           1,
+          2,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/spec/user_spec.rb": {
+        "lines": [
+          1,
+          null,
           1,
           1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/lib/user.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
           1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1636472775
+    "timestamp": 1636473473
   }
 }
