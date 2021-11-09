@@ -6,3 +6,4 @@ feature 'Spaces' do
     expect(page).to have_content ('Space 1')
   end 
 end 
+
