@@ -3,11 +3,19 @@ require 'capybara/rspec'
 require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
+require_relative './setup_test_database'
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+  SimpleCov::Formatter::Console,
+  ## SimpleCov::Formatter::HTMLFormatter
+])
+SimpleCov.start
 
 require_relative './setup_test_database'
 
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
 Capybara.app = MakersBnb
+ENV['ENVIRONMENT'] = 'test'
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
@@ -18,4 +26,7 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
   config.shared_context_metadata_behavior = :apply_to_host_groups
+  config.before(:each) do
+    setup_test_database
+  end
 end

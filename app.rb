@@ -10,6 +10,11 @@ class MakersBnb < Sinatra::Base
     @display = @result.map { |spaces| spaces['name'] }
     erb :spaces
   end 
+  
+    get '/spaces/new' do 
+    erb :list_space
+  end
 
   run! if app_file == $0
+
 end
