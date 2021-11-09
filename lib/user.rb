@@ -1,5 +1,5 @@
 require 'bcrypt'
-require_relative './database_connection.rb'
+require_relative './database_connection'
 
 class User 
 
