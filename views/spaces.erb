@@ -1,8 +1,23 @@
+<head>
+<style>
+div {
+  background-color: white;
+  width: 300px;
+  border: 15px solid black;
+  padding: 50px;
+  margin: 20px;
+}
+</style>
+</head>
+
 <center>
 <h1> Book a Space </h1>
 <h3> Looking to rent your space out? Checkout the link below to add your own space </h3>
 <button type="button">List a space</button>
 
-
-<% @result.map { |spaces| spaces['name'] } %>
+<div>
+<% @display.each do |space| %>
+  <li> <%= space %> </li>
+<%end%>
+</div>
 </center>
