@@ -51,7 +51,18 @@ As a User,
 So my spaces and booking requests belong only to me,
 I want to be able to sign up for MakersBnb.
 
-As a User, 
+As a User,
 So I can come back to my requests/spaces,
 I want to be able to login.
 ```
+
+## Set Up
+
+To setup the database:
+
+- Connect to psql
+- Create the database using `CREATE DATABASE makers_bnb;`
+- Create the test database using `CREATE DATABASE makers_bnb_test;`
+
+* Connect to DB with `\c makers_bnb` or `\c makers_bnb_test`
+* Use the SQL command from the file in migration folder
