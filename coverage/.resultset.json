@@ -5,24 +5,53 @@
         "lines": [
           1,
           1,
-          null,
           1,
           null,
           1,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
           1,
           1,
           null,
           null,
           1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/rebecca/Projects/Makers/Week_7_MakersBnB/makers_bnb/lib/space.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          null,
+          0,
+          null,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
           0,
           null,
           null,
-          1,
-          0,
-          0,
+          2,
+          4,
           null,
-          null,
-          1,
           null,
           null
         ]
@@ -35,6 +64,19 @@
           1,
           1,
           1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
           null,
           null
         ]
@@ -54,36 +96,8 @@
           null,
           null
         ]
-      },
-      "/Users/rebecca/Projects/Makers/Week_7_MakersBnB/makers_bnb/lib/space.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          0,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          0,
-          null,
-          null,
-          1,
-          2,
-          null,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1636473408
+    "timestamp": 1636474530
   }
 }
