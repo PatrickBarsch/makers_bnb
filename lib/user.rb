@@ -1,4 +1,5 @@
 require 'bcrypt'
+require_relative './database_connection.rb'
 
 class User 
 
@@ -10,11 +11,7 @@ class User
   end
 
   def self.sign_up(email:, password:)
-    if ENV['ENVIRONMENT'] == 'test'
-      connection = PG.connect(dbname: "makers_bnb_test") 
-    else
-      connection = PG.connect(dbname: "makers_bnb")
-    end
+    connection = DatabaseConnection.setup
     encrypted_password = BCrypt::Password.create(password)
     sql = "INSERT INTO users(email, password) VALUES($1, $2) RETURNING id, email;"
     added_user = connection.exec_params(sql, [email, encrypted_password])
