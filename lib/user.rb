@@ -14,7 +14,7 @@ class User
     connection = DatabaseConnection.setup
     encrypted_password = BCrypt::Password.create(password)
     sql = "INSERT INTO users(email, password) VALUES($1, $2) RETURNING id, email;"
-    added_user = connection.exec_params(sql, [email, encrypted_password])
+    added_user = connection.query(sql, [email, encrypted_password])
     added_user = added_user.first
     User.new(id: added_user["id"], email: added_user["email"])
   end
