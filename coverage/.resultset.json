@@ -1,0 +1,53 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/app.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/spec/features/add_space_spec.rb": {
+        "lines": [
+
+        ]
+      },
+      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/spec/space_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/lib/space.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
+          1,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1636459133
+  }
+}
