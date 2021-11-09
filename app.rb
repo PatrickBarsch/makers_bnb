@@ -11,7 +11,7 @@ class MakersBnb < Sinatra::Base
     erb :spaces
   end 
   
-    get '/spaces/new' do 
+  get '/spaces/new' do 
     erb :list_space
   end
 
