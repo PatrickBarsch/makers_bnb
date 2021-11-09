@@ -1,6 +1,19 @@
 <head>
 <style>
-div {
+div.a { 
+  text-align: right;
+}
+</style>
+
+<div class="a">
+<a href="/spaces.asp">Spaces<a/> |
+<a href="/requests.asp">Requests<a/> |
+<a href="/.asp">Sign out<a/> |
+</div>
+
+
+<style>
+div.b {
   background-color: white;
   width: 300px;
   border: 15px solid black;
@@ -10,12 +23,13 @@ div {
 </style>
 </head>
 
+
 <center>
 <h1> Book a Space </h1>
 <h3> Looking to rent your space out? Checkout the link below to add your own space </h3>
 <button type="button">List a space</button>
 
-<div>
+<div class="b">
 <% @display.each do |space| %>
   <li> <%= space %> </li>
 <%end%>
