@@ -1,3 +1,5 @@
+require 'bcrypt'
+
 class User 
 
   attr_reader :id, :email
@@ -7,14 +9,15 @@ class User
     @email = email
   end
 
-  def self.sign_up(email:)
+  def self.sign_up(email:, password:)
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: "makers_bnb_test") 
     else
       connection = PG.connect(dbname: "makers_bnb")
     end
-    sql = "INSERT INTO users(email) VALUES($1) RETURNING id, email;"
-    added_user = connection.exec_params(sql, [email])
+    encrypted_password = BCrypt::Password.create(password)
+    sql = "INSERT INTO users(email, password) VALUES($1, $2) RETURNING id, email;"
+    added_user = connection.exec_params(sql, [email, encrypted_password])
     added_user = added_user.first
     User.new(id: added_user["id"], email: added_user["email"])
   end
