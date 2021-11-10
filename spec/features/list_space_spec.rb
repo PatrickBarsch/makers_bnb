@@ -4,8 +4,8 @@ feature 'List a space' do
       fill_in('name', with: 'La Cotagge')
       fill_in('description', with: 'Some description')
       fill_in('price', with: 150)
-      fill_in('from_date', with: 10/11/2021)
-      fill_in('to_date', with: 20/11/2021)
+      fill_in('date_from', with: 10/11/2021)
+      fill_in('date_to', with: 20/11/2021)
       click_button('List my Space')
   
     #   ---- To Be Changed -----

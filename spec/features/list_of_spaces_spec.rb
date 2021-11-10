@@ -9,7 +9,7 @@ feature 'Spaces' do
   scenario 'Add a space' do
     setup_test_database
     visit('/spaces/new')
-    fill_in :title, with: 'Cottage'
+    fill_in :name, with: 'Cottage'
     fill_in :description, with: 'A lovely remote cottage'
     fill_in :price, with: 80
     fill_in :date_from, with: '2021-11-09'

@@ -26,7 +26,7 @@
     <div class="col-md-6 col-centered" style="margin: auto 17rem;">
       <h3 class="title" style="text-align: center;"> List a Space </h3>
 
-      <form method="post" style="border-style: groove; padding: 5%" action="/list_space">
+      <form method="post" style="border-style: groove; padding: 5%" action="/spaces/new">
 
       <table>
         
@@ -47,12 +47,12 @@
         
           
           <div class="form-group">
-            <label for="from_date">Available from (DD/MM/YY)</label>
+            <label for="date_from">Available from (DD/MM/YY)</label>
               <input type="date" name="date_from"  class="form-control" required/>
           </div>
             
           <div class="form-group">
-            <label for="to_date">Available to (DD/MM/YY)</label>
+            <label for="date_to">Available to (DD/MM/YY)</label>
               <input type="date" name="date_to" class="form-control" required/>
           </div>
           <div class="text-center">

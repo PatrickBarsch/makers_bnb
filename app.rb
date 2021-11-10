@@ -27,12 +27,10 @@ class MakersBnb < Sinatra::Base
     get '/spaces/new' do 
         erb :list_space
     end
-    post '/list_space' do
-      redirect '/spaces'
-    end
-
+  
     post '/spaces/new' do
-      Space.list(params[:title], params[:description], params[:price], params[:date_from], params[:date_to])
+      p '---------'
+      p Space.list(params[:name], params[:description], params[:price], params[:date_from], params[:date_to])
       redirect '/spaces'
     end 
 
