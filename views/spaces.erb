@@ -1,37 +1,36 @@
-<head>
-<style>
-div.a { 
-  text-align: right;
-}
-</style>
+<!DOCTYPE html>
+<html>
 
-<div class="a">
-<a href="/spaces.asp">Spaces<a/> |
-<a href="/requests.asp">Requests<a/> |
-<a href="/.asp">Sign out<a/> |
-</div>
+  <head>
+  <title> Available Spaces | Makers BnB </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
 
+  <body>
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link active" href="/spaces">Spaces </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Requests </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Sign out</a>
+      </li>
+    </ul>
+    <div class="container"  >
+      <div class="row">
+        <div class="col-md-6 col-centered" style="margin: auto 17rem;">
+          <h3 class="title" style="text-align: center;"> Book a Space </h3>
+          <p style="text-align: center;"> 
+            Looking to rent your space out? <br>
+            Checkout the link below to add yours! 
+            <a class="nav-link" href="/spaces/new">List a space</a>
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </body>
 
-<style>
-div.b {
-  background-color: white;
-  width: 300px;
-  border: 15px solid black;
-  padding: 50px;
-  margin: 20px;
-}
-</style>
-</head>
-
-
-<center>
-<h1> Book a Space </h1>
-<h3> Looking to rent your space out? Checkout the link below to add your own space </h3>
-<button type="button">List a space</button>
-
-<div class="b">
-<% @space_list.each do |space| %>
-  <li> <%= space %> </li>
-<%end%>
-</div>
-</center>
+</html>
