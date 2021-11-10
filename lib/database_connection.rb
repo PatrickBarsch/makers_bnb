@@ -8,7 +8,8 @@ class DatabaseConnection
       @connection = PG.connect(dbname: "makers_bnb")
     end
   end
+  
   def self.query(sql, params = [])
-      @connection.exec_params(sql, params)
+    @connection.exec_params(sql, params)
   end
 end
