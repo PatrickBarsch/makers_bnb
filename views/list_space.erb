@@ -9,7 +9,7 @@
 
 <ul class="nav justify-content-end">
   <li class="nav-item">
-    <a class="nav-link active" href="#">Spaces </a>
+    <a class="nav-link active" href="/spaces">Spaces </a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">Requests </a>
@@ -21,27 +21,27 @@
 
 
 
-<div class="container center_div" style="margin: 0 30%;width: 80%;" >
+<div class="container"  >
  <div class="row">
-    <div class="col-md-6 col-centered">
-      <h2 class="title" style="text-align: center;"> List Space </h2>
+    <div class="col-md-6 col-centered" style="margin: auto 17rem;">
+      <h3 class="title" style="text-align: center;"> List a Space </h3>
 
-      <form method="post" style="float:left" action="/spaces/new">
+      <form method="post" style="border-style: groove; padding: 5%" action="/list_space">
 
       <table>
         <div class="form-group">
           <label for="title">Name</label>
-            <input type="text" name="title" class="form-control"/>
+            <input type="text" name="name" class="form-control" required/>
         </div>
 
         <div class="form-group">
           <label for="description">Description</label>
-          <textarea name="description" rows="5" cols="50" maxlength="500" class="form-control"></textarea>
+          <textarea name="description" rows="5" cols="50" maxlength="500" class="form-control" required></textarea>
         </div>
 
         <div class="form-group">
         <label for="price">Price per night (£) </label>
-          <input type="number" name="price" class="form-control" placeholder="£"/>
+          <input type="number" name="price" class="form-control" placeholder="£" required/>
         </div>
         
           
