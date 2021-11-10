@@ -1,4 +1,5 @@
 feature 'Spaces' do
+
   scenario 'See the list of spaces' do
     setup_test_database
     add_space('Space 1', 'Description 1', 80)
