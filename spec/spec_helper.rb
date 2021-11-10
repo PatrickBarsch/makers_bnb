@@ -4,14 +4,13 @@ require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
 require_relative './setup_test_database'
+require_relative './database_helpers'
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
   ## SimpleCov::Formatter::HTMLFormatter
 ])
 SimpleCov.start
-
-require_relative './setup_test_database'
 
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
 Capybara.app = MakersBnb

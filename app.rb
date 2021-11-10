@@ -4,6 +4,7 @@ require './lib/space'
 
 class MakersBnb < Sinatra::Base
 
+
     # ----- Sign Up -----
     get '/' do 
         erb :sign_up
@@ -33,6 +34,7 @@ class MakersBnb < Sinatra::Base
       p Space.list(params[:name], params[:description], params[:price], params[:date_from], params[:date_to])
       redirect '/spaces'
     end 
+
 
   run! if app_file == $0
 
