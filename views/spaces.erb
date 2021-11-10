@@ -18,16 +18,21 @@
         <a class="nav-link" href="#">Sign out</a>
       </li>
     </ul>
-    <div class="container"  >
-      <div class="row">
-        <div class="col-md-6 col-centered" style="margin: auto 17rem;">
-          <h3 class="title" style="text-align: center;"> Book a Space </h3>
-          <p style="text-align: center;"> 
-            Looking to rent your space out? <br>
-            Checkout the link below to add yours! 
-            <a class="nav-link" href="/spaces/new">List a space</a>
-          </p>
-          
+    <div class="container">
+      <div class="col-md-6 col-centered" style="margin: auto 17rem;">
+        <h3 class="title" style="text-align: center;"> Book a Space </h3>
+        <p style="text-align: center;"> 
+          Looking to rent your space out? <br>
+          Checkout the link below to add yours! 
+          <a class="nav-link" href="/spaces/new">List a space</a>
+        </p>
+        <div class="container" style="border-style: groove; padding: 5%">
+          <% @space_list.each do |space| %>
+            <div class="container" style="border-style: groove; padding: 5%; margin: 5%">
+              <h5> <%= space.name %> </h5>
+              <%= space.description%>
+            </div>
+          <%end%>
         </div>
       </div>
     </div>

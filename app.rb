@@ -22,6 +22,7 @@ class MakersBnb < Sinatra::Base
     # ----- Book a Space -----
     get '/spaces' do
       @space_list = Space.all
+      p @space_list
       erb :spaces
     end 
     # ----- List Space -----
