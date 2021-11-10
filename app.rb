@@ -1,7 +1,9 @@
 require 'sinatra/base'
 require 'pg'
+require './lib/space'
 
 class MakersBnb < Sinatra::Base
+
     # ----- Sign Up -----
     get '/' do 
         erb :sign_up
@@ -18,10 +20,7 @@ class MakersBnb < Sinatra::Base
     end
     # ----- Book a Space -----
     get '/spaces' do
-      connection = PG.connect(dbname: 'makers_bnb_test')
-      connection.exec("INSERT INTO spaces (name) VALUES ('Space 1');") 
-      @result = connection.exec("SELECT * FROM spaces")
-      @display = @result.map { |spaces| spaces['name'] }
+      @space_list = Space.all
       erb :spaces
     end 
     # ----- List Space -----
@@ -31,6 +30,11 @@ class MakersBnb < Sinatra::Base
     post '/list_space' do
       redirect '/spaces'
     end
+
+    post '/spaces/new' do
+      Space.list(params[:title], params[:description], params[:price], params[:date_from], params[:date_to])
+      redirect '/spaces'
+    end 
 
   run! if app_file == $0
 

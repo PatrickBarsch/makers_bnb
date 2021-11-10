@@ -29,8 +29,9 @@
       <form method="post" style="border-style: groove; padding: 5%" action="/list_space">
 
       <table>
+        
         <div class="form-group">
-          <label for="title">Name</label>
+          <label for="name">Name</label>
             <input type="text" name="name" class="form-control" required/>
         </div>
 
@@ -47,12 +48,12 @@
           
           <div class="form-group">
             <label for="from_date">Available from (DD/MM/YY)</label>
-              <input type="date" name="from_date"  class="form-control" required/>
+              <input type="date" name="date_from"  class="form-control" required/>
           </div>
             
           <div class="form-group">
             <label for="to_date">Available to (DD/MM/YY)</label>
-              <input type="date" name="to_date" class="form-control" required/>
+              <input type="date" name="date_to" class="form-control" required/>
           </div>
           <div class="text-center">
             <input type='submit' value='List my Space' class="btn btn-default ">
