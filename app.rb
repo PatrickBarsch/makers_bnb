@@ -5,7 +5,7 @@ require './lib/space'
 class MakersBnb < Sinatra::Base
   
   get '/spaces' do
-    p @space_list = Space.all
+    @space_list = Space.all
     erb :spaces
   end 
   
@@ -14,7 +14,7 @@ class MakersBnb < Sinatra::Base
   end
 
   post '/spaces/new' do
-    Space.list(params[:title], (params[:description]), (params[:price]), (params[:date_from]), (params[:date_to]))
+    Space.list(params[:title], params[:description], params[:price], params[:date_from], params[:date_to])
     redirect '/spaces'
   end 
 
