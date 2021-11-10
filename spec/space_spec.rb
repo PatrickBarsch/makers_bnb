@@ -7,4 +7,8 @@ describe Space do
       expect(added.first).to eq results
     end
   end
+  # describe '.all' do
+  #   it 'returns a list of all available spaces'
+  # end
+  # end
 end
