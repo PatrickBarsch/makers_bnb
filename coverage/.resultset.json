@@ -1,53 +1,104 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/app.rb": {
+      "/Users/rebecca/Projects/Makers/Week_7_MakersBnB/makers_bnb/app.rb": {
         "lines": [
           1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
           null,
           1,
           null,
           null
         ]
       },
-      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/spec/features/add_space_spec.rb": {
-        "lines": [
-
-        ]
-      },
-      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/spec/space_spec.rb": {
+      "/Users/rebecca/Projects/Makers/Week_7_MakersBnB/makers_bnb/lib/space.rb": {
         "lines": [
           1,
           null,
           1,
           1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/lib/space.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
+          2,
+          2,
           null,
           0,
           null,
+          null,
+          2,
+          null,
+          2,
+          null,
+          null,
           1,
+          2,
+          2,
+          null,
+          0,
+          null,
+          null,
+          2,
+          4,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/rebecca/Projects/Makers/Week_7_MakersBnB/makers_bnb/spec/features/list_of_spaces_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/rebecca/Projects/Makers/Week_7_MakersBnB/makers_bnb/spec/space_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1636459133
+    "timestamp": 1636548058
   }
 }
