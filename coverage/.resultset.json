@@ -40,7 +40,6 @@
       "/Users/pbarsch/Desktop/MAKERS/makers_bnb/spec/space_spec.rb": {
         "lines": [
           1,
-          1,
           null,
           1,
           1,
@@ -79,19 +78,8 @@
           null,
           null,
           1,
-          0,
+          2,
           null,
-          null
-        ]
-      },
-      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/spec/database_helpers.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          2,
-          2,
-          2,
           null
         ]
       },
@@ -139,13 +127,12 @@
           2,
           2,
           2,
-          2,
           null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1636477203
+    "timestamp": 1636528846
   }
 }

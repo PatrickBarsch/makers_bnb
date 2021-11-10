@@ -1,5 +1,4 @@
 require 'space'
-require_relative './database_helpers'
 
 describe Space do
   describe '.list' do 
