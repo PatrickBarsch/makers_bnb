@@ -8,4 +8,13 @@ class Availability
       DatabaseConnection.query(sql, [date, space_id])
     end
   end
+
+  def self.when(space_id)
+    DatabaseConnection.setup
+    sql = "SELECT date FROM availabilities " \
+      "WHERE space_id = #{space_id} " \
+      "AND user_id_booked IS NULL"
+    availabilities = DatabaseConnection.query(sql)
+    availabilities.map { |available| available['date'] }
+  end
 end
