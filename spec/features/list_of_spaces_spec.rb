@@ -12,7 +12,7 @@ feature 'Spaces' do
     visit('/spaces/new')
     fill_in :name, with: 'Cottage'
     fill_in :description, with: 'A lovely remote cottage'
-    fill_in :price, with: 80
+    fill_in :price_per_night, with: 80
     fill_in :date_from, with: '2021-11-09'
     fill_in :date_to, with: '2021-11-11'
     click_button('List my Space')

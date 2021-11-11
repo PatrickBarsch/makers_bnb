@@ -11,11 +11,11 @@ class Space
     @id = id 
   end
 
-  def self.list(name:, description:, price_per_night:)
+  def self.list(name:, description:, price_per_night:, owner_id:)
     DatabaseConnection.setup
-    sql = "INSERT INTO spaces(name, description, price_per_night)"\
-          " VALUES($1, $2, $3) RETURNING id, name, description, price_per_night;"
-    DatabaseConnection.query(sql, [name, description, price_per_night])
+    sql = "INSERT INTO spaces(name, description, price_per_night, owner_id)"\
+          " VALUES($1, $2, $3, $4) RETURNING id, name, description, price_per_night, owner_id;"
+    DatabaseConnection.query(sql, [name, description, price_per_night, owner_id])
   end
 
   def self.all
