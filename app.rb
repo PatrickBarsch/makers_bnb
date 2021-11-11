@@ -30,12 +30,19 @@ class MakersBnb < Sinatra::Base
     end
   
     post '/spaces/new' do
-      Space.list(**params)
+      Space.list(name: params[:name], description: params[:description],price_per_night: params[:price_per_night])
       redirect '/spaces'
     end 
 
-    get 'spaces/:id' do
+    get '/spaces/name' do
+      'hello'
+      redirect '/spaces/:name'
+    end 
 
+    get '/spaces/:id' do
+      @space_list = Space.all
+      @space = @space_list.filter { |space| space.id == params[:id]}
+      erb :space_id
     end 
 
   run! if app_file == $0
