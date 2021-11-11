@@ -37,7 +37,6 @@
           1,
           2,
           2,
-          2,
           null,
           null,
           1,
@@ -93,15 +92,48 @@
           null,
           1,
           1,
+          15,
           14,
-          13,
           null,
           1,
           null,
           null,
           null,
           1,
-          13,
+          42,
+          null,
+          null
+        ]
+      },
+      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/spec/availability_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/lib/availability.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          29,
+          29,
+          null,
           null,
           null
         ]
@@ -297,6 +329,6 @@
         ]
       }
     },
-    "timestamp": 1636643317
+    "timestamp": 1636645832
   }
 }
