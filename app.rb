@@ -43,7 +43,7 @@ class MakersBnb < Sinatra::Base
     redirect '/spaces/:name'
   end 
 
-  get '/spaces/:id' do
+  get '/spaces/id' do
     @space_list = Space.all
     @space = @space_list.filter { |space| space.id == params[:id] }
     @availability = Availability.when {params[:id]}

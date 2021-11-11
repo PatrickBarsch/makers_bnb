@@ -26,7 +26,7 @@
           <center>
           Looking to rent your space out? <br>
           Checkout the link below to add yours! 
-          <a class="nav-link" href="/spaces/new"><input type='button' value='List a Space' class="btn btn-default " ></a>
+          <a class="nav-link col-4" href="/spaces/new"><input type='button' value='List a Space' class="btn btn-default " ></a>
           </center>
       </div>
     </div>
@@ -62,8 +62,8 @@
             <%= space.description%><br>
             <div class="container" style="margin-top:1rem;">
               <div class="row">
-                  <h6 class="col-sm" style="font-style: oblique;">Price per night: £<%= space.price %></h6>
-                  <a class="col-sm" href="/spaces/<%=space.id%>" style="text-align: end;">
+                  <h6 class="col-sm" style="font-style: oblique;">Price per night: £<%= space.price_per_night %></h6>
+                  <a class="col-2" href="/spaces/<%=space.id%>" style="text-align: end;">
                     <input type='button' value='Book this Space' class="btn btn-default" >
                   </a>
               </div>
