@@ -34,7 +34,8 @@
       <% @space_list.each do |space| %>
         <div class="row" style="border-style: groove; padding: 5%; margin: 5%">
           <h5 class="title" style="text-align: left;"> <%= space.name %> </h5>
-          <%= space.description%>
+          <br> <%= space.description%>
+          <br> <a href='/spaces/name'> Book <%=space.name%></a> 
         </div>
       <%end%>
     </div>

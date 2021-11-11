@@ -23,4 +23,8 @@ class Space
     result.map { |space| Space.new(name: space['name'], description: space['description'], price_per_night: space['price_per_night']) }
   end 
 
+  def self.id(name)
+    DatabaseConnection.setup
+    DatabaseConnection.query("SELECT id FROM spaces WHERE name = #{name}")
+  end 
 end
