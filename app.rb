@@ -4,24 +4,34 @@ require './lib/space'
 
 class MakersBnb < Sinatra::Base
 
-  enable :sessions
-
     # ----- Sign Up -----
     get '/' do 
-        erb :sign_up
+      @style = 'display:none'
+      erb :sign_up
     end
+
     post '/sign_up' do
-      redirect '/sessions/new'
+      if params[:passw_new_user_first] == params[:pass_new_user_second]
+        redirect '/sessions/new'
+      else 
+        @style = 'display:block'
+        erb :sign_up
+      end 
     end
+
     # ----- Log in -----
     get '/sessions/new' do 
         erb :login
     end
     post '/login' do
+      session[:email]= params[:email]
+      session[:password] = params[:password]
        redirect '/spaces'
     end
     # ----- Book a Space -----
     get '/spaces' do
+      @email = session[:email]
+      @password = session[:password]
       @space_list = Space.all
       erb :spaces
     end 

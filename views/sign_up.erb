@@ -6,6 +6,7 @@
 </head>
 
 <body>
+<div id="error"></div>
 
 <ul class="nav justify-content-end">
   <li class="nav-item">
@@ -21,6 +22,7 @@
  <div class="row">
     <div class="col-md-6 col-centered">
         <h3 style="text-align:center; margin: 15% 0"> Sign up to MakersBnB</h3>
+        <p style='<%=@style%>'>Passwords Do Not Match</p>
         <form style="border-style: groove; padding: 5%" action="/sign_up" method="post">
         <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
@@ -28,7 +30,8 @@
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" name="passw_new_user_first" placeholder="Password" required>
+            <input type="password" class="form-control" name="passw_new_user_first" placeholder="Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Password confirmation</label>
@@ -43,5 +46,16 @@
 </div>
 
 
-</body>
-</html>
+
+
+<div id ="message"; style="text-align: center;">
+<h3>Password must contain the following:</h3>
+  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+  <p id="number" class="invalid">A <b>number</b></p>
+  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+</div>
+
+
+
+   

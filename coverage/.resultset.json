@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/app.rb": {
+      "/Users/rebecca/Projects/Makers/Week_7_MakersBnB/makers_bnb/app.rb": {
         "lines": [
           1,
           1,
@@ -10,7 +10,6 @@
           1,
           null,
           null,
-          null,
           1,
           1,
           null,
@@ -23,132 +22,93 @@
           null,
           1,
           1,
-          null,
-          null,
           1,
-<<<<<<< HEAD
-          4,
-          4,
-=======
-          2,
-          2,
->>>>>>> 6c676af (sessions enabled)
-          null,
-          null,
           1,
-          2,
-          null,
-          null,
-          1,
-<<<<<<< HEAD
-          2,
-          2,
-          2,
-=======
-          0,
-          0,
->>>>>>> 6c676af (sessions enabled)
-          null,
-          null,
-          1,
-          null,
           0,
           null,
           null,
           1,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/lib/space.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          null,
-<<<<<<< HEAD
-          1,
-          null,
-          1,
-          6,
-          6,
-          6,
-          6,
-          null,
-          null,
-          1,
-          6,
-          6,
-          null,
-          6,
-          null,
-          null,
-          1,
-          5,
-          5,
-          11,
-=======
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          1,
-          2,
-          2,
           3,
->>>>>>> 6c676af (sessions enabled)
+          3,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
+          null,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/rebecca/Projects/Makers/Week_7_MakersBnB/makers_bnb/lib/space.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          6,
+          6,
+          6,
+          6,
+          null,
+          null,
+          1,
+          6,
+          6,
+          null,
+          6,
+          null,
+          null,
+          1,
+          4,
+          4,
+          10,
           null,
           null,
           null
         ]
       },
-      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/lib/database_connection.rb": {
+      "/Users/rebecca/Projects/Makers/Week_7_MakersBnB/makers_bnb/lib/database_connection.rb": {
         "lines": [
           1,
           null,
           1,
           1,
-<<<<<<< HEAD
-          14,
           13,
-=======
-          5,
-          4,
->>>>>>> 6c676af (sessions enabled)
+          12,
           null,
           1,
           null,
           null,
           null,
           1,
-<<<<<<< HEAD
-          13,
-=======
-          4,
->>>>>>> 6c676af (sessions enabled)
+          12,
           null,
           null
         ]
       },
-      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/spec/database_connection_spec.rb": {
+      "/Users/rebecca/Projects/Makers/Week_7_MakersBnB/makers_bnb/spec/database_connection_spec.rb": {
         "lines": [
           1,
           null,
@@ -166,7 +126,7 @@
           null
         ]
       },
-      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/spec/features/list_of_spaces_spec.rb": {
+      "/Users/rebecca/Projects/Makers/Week_7_MakersBnB/makers_bnb/spec/features/list_of_spaces_spec.rb": {
         "lines": [
           1,
           null,
@@ -183,16 +143,16 @@
           1,
           1,
           1,
-          0,
-          0,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
       },
-      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/spec/features/list_space_spec.rb": {
+      "/Users/rebecca/Projects/Makers/Week_7_MakersBnB/makers_bnb/spec/features/list_space_spec.rb": {
         "lines": [
           1,
           1,
@@ -200,26 +160,10 @@
           1,
           1,
           1,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
           null,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/spec/features/login_spec.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
           null,
           1,
           1,
@@ -228,9 +172,8 @@
           null
         ]
       },
-      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/spec/features/sign_up_spec.rb": {
+      "/Users/rebecca/Projects/Makers/Week_7_MakersBnB/makers_bnb/spec/features/login_spec.rb": {
         "lines": [
-          1,
           1,
           1,
           1,
@@ -245,7 +188,24 @@
           null
         ]
       },
-      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/spec/space_spec.rb": {
+      "/Users/rebecca/Projects/Makers/Week_7_MakersBnB/makers_bnb/spec/features/sign_up_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/rebecca/Projects/Makers/Week_7_MakersBnB/makers_bnb/spec/space_spec.rb": {
         "lines": [
           1,
           1,
@@ -254,7 +214,6 @@
           null,
           null,
           null,
-<<<<<<< HEAD
           1,
           1,
           1,
@@ -271,57 +230,26 @@
           null,
           null,
           null,
-=======
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          1,
->>>>>>> 6c676af (sessions enabled)
           1,
           null,
           null,
           null,
           null,
-<<<<<<< HEAD
           1,
           1,
           1,
           4,
           1,
           1,
-=======
->>>>>>> 6c676af (sessions enabled)
           1,
-          null,
-          null,
-          null,
-          null,
           1,
-          null,
-          null,
-          null,
-          null,
-          null,
           1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
           null,
           null,
           null
         ]
       },
-      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/spec/user_spec.rb": {
+      "/Users/rebecca/Projects/Makers/Week_7_MakersBnB/makers_bnb/spec/user_spec.rb": {
         "lines": [
           1,
           null,
@@ -345,7 +273,7 @@
           null
         ]
       },
-      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/lib/user.rb": {
+      "/Users/rebecca/Projects/Makers/Week_7_MakersBnB/makers_bnb/lib/user.rb": {
         "lines": [
           1,
           1,
@@ -371,10 +299,6 @@
         ]
       }
     },
-<<<<<<< HEAD
-    "timestamp": 1636643010
-=======
-    "timestamp": 1636641068
->>>>>>> 6c676af (sessions enabled)
+    "timestamp": 1636644450
   }
 }
