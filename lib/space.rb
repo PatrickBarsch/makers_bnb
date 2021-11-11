@@ -10,7 +10,7 @@ class Space
     @price = price.to_i
   end
 
-  def self.list(name, description, price, date_from, date_to)
+  def self.list(name:, description:, price:, date_from:, date_to:)
     DatabaseConnection.setup
     sql = "INSERT INTO spaces(name, description, price, date_from, date_to)"\
           " VALUES($1, $2, $3, $4, $5) RETURNING id, name, description, price, date_from, date_to;"

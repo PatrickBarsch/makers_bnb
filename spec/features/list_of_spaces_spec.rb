@@ -16,7 +16,7 @@ feature 'Spaces' do
     fill_in :date_from, with: '2021-11-09'
     fill_in :date_to, with: '2021-11-11'
     click_button('List my Space')
-    expect(page).to have_content 'Cottage'
     expect(page).to have_current_path('/spaces')
+    expect(page).to have_content('Cottage')
   end 
 end 

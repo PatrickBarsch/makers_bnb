@@ -18,6 +18,7 @@
         <a class="nav-link" href="#">Sign out</a>
       </li>
     </ul>
+
     <div class="container">
       <div class="col-md-6 col-centered" style="margin: auto 17rem;">
         <h3 class="title" style="text-align: center;"> Book a Space </h3>
@@ -26,16 +27,34 @@
           Checkout the link below to add yours! 
           <a class="nav-link" href="/spaces/new">List a space</a>
         </p>
-        <div class="container" style="border-style: groove; padding: 5%">
-          <% @space_list.each do |space| %>
-            <div class="container" style="border-style: groove; padding: 5%; margin: 5%">
-              <h5> <%= space.name %> </h5>
-              <%= space.description%>
-            </div>
-          <%end%>
-        </div>
       </div>
     </div>
+
+    <%# <div class="container">
+        <form class="from-inline" style="border-style: groove; padding: 5%" action="/spaces" method="get">
+          <div class="form-group">
+            <label for="dateFrom">Available From</label>
+            <input id="inlineForDate" type="date" class="form-control" name="date_from" placeholder="Enter Available From">
+          </div>
+          <div class="form-group">
+            <label for="dateTo">Available Until</label>
+            <input id="inlineForDate" type="date" class="form-control" name="date:to" placeholder="Enter Available To">
+          </div>
+          <div class="form-group">
+            <input id="inlineForSubmit" type='submit' value='List Spaces' class="btn btn-default ">
+          </div>
+        </form>
+    </div> %>
+
+    <div class="container" style="border-style: groove; padding: 5%">
+      <% @space_list.each do |space| %>
+        <div class="row" style="border-style: groove; padding: 5%; margin: 5%">
+          <h5 class="title" style="text-align: left;"> <%= space.name %> </h5>
+          <%= space.description%>
+        </div>
+      <%end%>
+    </div>
+
   </body>
 
 </html>

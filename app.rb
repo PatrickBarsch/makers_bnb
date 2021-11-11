@@ -22,7 +22,6 @@ class MakersBnb < Sinatra::Base
     # ----- Book a Space -----
     get '/spaces' do
       @space_list = Space.all
-      p @space_list
       erb :spaces
     end 
     # ----- List Space -----
@@ -31,7 +30,7 @@ class MakersBnb < Sinatra::Base
     end
   
     post '/spaces/new' do
-      Space.list(params[:name], params[:description], params[:price], params[:date_from], params[:date_to])
+      Space.list(**params)
       redirect '/spaces'
     end 
 
