@@ -4,6 +4,8 @@ require './lib/space'
 
 class MakersBnb < Sinatra::Base
 
+  enable :sessions
+
     # ----- Sign Up -----
     get '/' do 
       @style = 'display:none'
