@@ -1,37 +1,60 @@
-<head>
-<style>
-div.a { 
-  text-align: right;
-}
-</style>
+<!DOCTYPE html>
+<html>
 
-<div class="a">
-<a href="/spaces.asp">Spaces<a/> |
-<a href="/requests.asp">Requests<a/> |
-<a href="/.asp">Sign out<a/> |
-</div>
+  <head>
+  <title> Available Spaces | Makers BnB </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
 
+  <body>
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link active" href="/spaces">Spaces </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Requests </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Sign out</a>
+      </li>
+    </ul>
 
-<style>
-div.b {
-  background-color: white;
-  width: 300px;
-  border: 15px solid black;
-  padding: 50px;
-  margin: 20px;
-}
-</style>
-</head>
+    <div class="container">
+      <div class="col-md-6 col-centered" style="margin: auto 17rem;">
+        <h3 class="title" style="text-align: center;"> Book a Space </h3>
+        <p style="text-align: center;"> 
+          Looking to rent your space out? <br>
+          Checkout the link below to add yours! 
+          <a class="nav-link" href="/spaces/new">List a space</a>
+        </p>
+      </div>
+    </div>
 
+    <%# <div class="container">
+        <form class="from-inline" style="border-style: groove; padding: 5%" action="/spaces" method="get">
+          <div class="form-group">
+            <label for="dateFrom">Available From</label>
+            <input id="inlineForDate" type="date" class="form-control" name="date_from" placeholder="Enter Available From">
+          </div>
+          <div class="form-group">
+            <label for="dateTo">Available Until</label>
+            <input id="inlineForDate" type="date" class="form-control" name="date:to" placeholder="Enter Available To">
+          </div>
+          <div class="form-group">
+            <input id="inlineForSubmit" type='submit' value='List Spaces' class="btn btn-default ">
+          </div>
+        </form>
+    </div> %>
 
-<center>
-<h1> Book a Space </h1>
-<h3> Looking to rent your space out? Checkout the link below to add your own space </h3>
-<button type="button">List a space</button>
+    <div class="container" style="border-style: groove; padding: 5%">
+      <% @space_list.each do |space| %>
+        <div class="row" style="border-style: groove; padding: 5%; margin: 5%">
+          <h5 class="title" style="text-align: left;"> <%= space.name %> </h5>
+          <%= space.description%>
+        </div>
+      <%end%>
+    </div>
 
-<div class="b">
-<% @space_list.each do |space| %>
-  <li> <%= space %> </li>
-<%end%>
-</div>
-</center>
+  </body>
+
+</html>
