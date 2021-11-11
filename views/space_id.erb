@@ -18,61 +18,36 @@
         <a class="nav-link" href="#">Sign out</a>
       </li>
     </ul>
-
-    
+    <% @space.each do |space| %>
     <div class="container">
       <div class="col-md-6 col-centered" style="margin: auto 17rem;">
-        <h3 class="title" style="text-align: center;"> space.name </h3>
+        <h1 class="title" style="text-align: center;"> <%= space.name %> </h1>
           <center>
-          space.description <br>
-          Checkout the link below to add yours! 
-          <a class="nav-link" href="/spaces/new"><input type='button' value='List a Space' class="btn btn-default " ></a>
+          <%= space.description %> <br>
           </center>
       </div>
     </div>
-
-    <form method="post" action="#">
+    <form class ="forminline" method="post" action="#">
       <div class="container" style="margin-bottom:1rem;margin-top:1rem;" >
         <div class="row">
           
               <div class="col-sm">
-                  <label for="date_from">Available from (DD/MM/YY)</label>
+                  <label for="date_from">Pick a night (DD/MM/YY)</label>
                   <input type="date" name="date_from"  class="form-control" required/>
               </div>
-              <div class="col-sm">
-                  <label for="date_to">Available to (DD/MM/YY)</label>
-                  <input type="date" name="date_to" class="form-control" required/>
-              </div>
+          
               <div class="col-sm">
                 <a class="nav-link" style="text-align: end;">
                     <input type='submit' value='Fiter by Date' class="btn btn-default" style=" margin-top:1.5rem;">
                 </a>
               </div>
+              <a class="nav-link" href="/spaces/new"><input type='button' value='Request to book' class="btn btn-default " ></a>
             
         </div>
       </div>
     </form>
- 
-    <div class="container" style="border-style: groove; padding:1.5rem; margin-bottom:2rem;">
-        <ul style="padding: 0; margin: 0">
-        <% @space_list.each do |space| %>
-          <li class='list-group' style="border-style: groove; padding: 1rem; margin:1rem " >
-            <h3><%= space.name %></h3><br>
-            Description:
-            <%= space.description%><br>
-            <div class="container" style="margin-top:1rem;">
-              <div class="row">
-                  <h6 class="col-sm" style="font-style: oblique;">Price per night: £<%= space.price_per_night %></h6>
-                  <a class="col-sm" href="/spaces/<%=space.id%>" style="text-align: end;">
-                    <input type='button' value='Book this Space' class="btn btn-default" >
-                  </a>
-              </div>
-            </div>
-          </li>
-          <%end%>
-        </ul>
-    </div>
-
+    <%end%>
   </body>
-
 </html>
+
+
