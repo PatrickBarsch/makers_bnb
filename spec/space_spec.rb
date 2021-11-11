@@ -24,7 +24,7 @@ describe Space do
       space3 = { name: 'MyUltraFancySpace', 
         description: 'I call it minimalistic',
         price_per_night: 300,
-        owner_id: 3  }
+        owner_id: 3 }
       
       added = [Space.list(**space1)]
       added << Space.list(**space2)
