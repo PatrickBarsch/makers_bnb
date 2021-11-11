@@ -30,10 +30,13 @@ class MakersBnb < Sinatra::Base
     end
   
     post '/spaces/new' do
-      Space.list(params[:name], params[:description], params[:price], params[:date_from], params[:date_to])
+      Space.list(**params)
       redirect '/spaces'
     end 
 
+    get 'spaces/:id' do
+
+    end 
 
   run! if app_file == $0
 
