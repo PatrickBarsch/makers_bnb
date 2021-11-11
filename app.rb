@@ -34,15 +34,15 @@ class MakersBnb < Sinatra::Base
       redirect '/spaces'
     end 
 
-    # get 'spaces/:id' do
-    #   @spaces = spaces_list.select do |id|
-    #     spaces.id == params[:id]
-    #   end.first 
-    #   'Correct Page'
-    # end 
-
     get '/spaces/name' do
       'hello'
+      redirect '/spaces/:name'
+    end 
+
+    get '/spaces/:id' do
+      @space_list = Space.all
+      @space = @space_list.filter { |space| space.id == params[:id]}
+      erb :space_id
     end 
 
   run! if app_file == $0

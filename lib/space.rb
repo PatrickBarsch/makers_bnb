@@ -2,12 +2,13 @@ require_relative './database_connection'
 
 class Space
 
-  attr_reader :name, :description, :price_per_night
+  attr_reader :name, :description, :price_per_night, :id
 
-  def initialize(name:, description:, price_per_night:)
+  def initialize(name:, description:, price_per_night:, id:)
     @name = name
     @description = description
     @price_per_night = price_per_night.to_i
+    @id = id 
   end
 
   def self.list(name:, description:, price_per_night:)
@@ -20,11 +21,7 @@ class Space
   def self.all
     DatabaseConnection.setup
     result = DatabaseConnection.query("SELECT * FROM spaces")
-    result.map { |space| Space.new(name: space['name'], description: space['description'], price_per_night: space['price_per_night']) }
+    result.map { |space| Space.new(name: space['name'], description: space['description'], price_per_night: space['price_per_night'], id: space['id']) }
   end 
 
-  def self.id(name)
-    DatabaseConnection.setup
-    DatabaseConnection.query("SELECT id FROM spaces WHERE name = #{name}")
-  end 
 end
