@@ -30,7 +30,8 @@ class MakersBnb < Sinatra::Base
     end
   
     post '/spaces/new' do
-      Space.list(**params)
+      @new_space = Space.list(name: params[:name],description: params[:description],price: params[:price])
+      Available.inser()
       redirect '/spaces'
     end 
 

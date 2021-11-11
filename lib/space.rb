@@ -10,17 +10,17 @@ class Space
     @price = price.to_i
   end
 
-  def self.list(name:, description:, price:, date_from:, date_to:)
+  def self.list(name:, description:, price:)
     DatabaseConnection.setup
-    sql = "INSERT INTO spaces(name, description, price, date_from, date_to)"\
-          " VALUES($1, $2, $3, $4, $5) RETURNING id, name, description, price, date_from, date_to;"
-    DatabaseConnection.query(sql, [name, description, price, date_from, date_to])
+    sql = "INSERT INTO spaces(name, description, price_per_night)"\
+          " VALUES($1, $2, $3) RETURNING id, name, description, price_per_night;"
+    DatabaseConnection.query(sql, [name, description, price])
   end
 
   def self.all
     DatabaseConnection.setup
     result = DatabaseConnection.query("SELECT * FROM spaces")
-    result.map { |space| Space.new(name: space['name'], description: space['description'], price: space['price']) }
+    result.map { |space| Space.new(name: space['name'], description: space['description'], price: space['price_per_night']) }
   end 
 
 end
