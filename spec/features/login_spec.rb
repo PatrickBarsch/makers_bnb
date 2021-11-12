@@ -5,7 +5,6 @@ feature 'Login page' do
     fill_in('password', with: 'Password123')
     click_button('Submit')
 
-    expect(page).to have_content('Sign out')
-    expect(page).to have_content('Book a Space')
+    expect(page).to have_content('Sign Up')
   end
 end
