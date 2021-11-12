@@ -51,12 +51,12 @@
                         
                             <div class="col-sm">
                             <label for="date_from">Pick Start Date </label>
-                                <input type="date" name="date_to"  class="form-control" required/>
+                                <input type="date" min="<%= @availability.first  %>"  name="date_to"  class="form-control" required/>
                             </div>
 
                             <div class="col-sm">
                             <label for="date_from">Pick End Date</label>
-                                <input type="date" name="date_to"  class="form-control" required/>
+                                <input type="date" max="<%= @availability.last  %>" name="date_to"  class="form-control" required/>
                             </div>
                         
                     </div>
