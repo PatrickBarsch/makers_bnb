@@ -34,4 +34,15 @@ class Space
     end
   end
 
+  def self.retrieve_by_id(id:)
+    DatabaseConnection.setup
+    sql = "SELECT * FROM spaces WHERE id = #{id};"
+    space_row = DatabaseConnection.query(sql)
+    space_row = space_row.first
+    Space.new(name: space_row['name'], 
+      description: space_row['description'], 
+      price_per_night: space_row['price_per_night'], 
+      id: space_row['id'])
+  end
+
 end

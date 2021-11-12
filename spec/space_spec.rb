@@ -35,4 +35,14 @@ describe Space do
       expect(space_list.last.price_per_night).to eq(300)
     end
   end
+  describe 'retrieve_by_id' do
+    it 'creates a space object corresponding to a database entry' do
+      added = Space.list(**@space1)
+      retreived_space = Space.retrieve_by_id(id: added.id)
+      expect(retreived_space.id).to eq added.id
+      expect(retreived_space.name).to eq added.name
+      expect(retreived_space.description).to eq added.description
+      expect(retreived_space.price_per_night).to eq added.price_per_night
+    end
+  end
 end
