@@ -72,6 +72,7 @@
           0,
           null,
           0,
+          0,
           null,
           null,
           null,
@@ -88,6 +89,14 @@
           1,
           null,
           1,
+          null,
+          1,
+          null,
+          1,
+          35,
+          35,
+          null,
+          null,
           1,
           5,
           5,
@@ -113,15 +122,15 @@
           null,
           1,
           1,
+          23,
           22,
-          21,
           null,
           1,
           null,
           null,
           null,
           1,
-          65,
+          66,
           null,
           null
         ]
@@ -184,7 +193,11 @@
           1,
           1,
           1,
+          1,
           null,
+          1,
+          1,
+          1,
           1,
           1,
           1,
@@ -291,7 +304,45 @@
           null
         ]
       },
+<<<<<<< HEAD
       "/Users/rebecca/Projects/Makers/Week_7_MakersBnB/makers_bnb/spec/space_spec.rb": {
+=======
+      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/spec/request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/lib/request.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/pbarsch/Desktop/MAKERS/makers_bnb/spec/space_spec.rb": {
+>>>>>>> b3570d9 (Request.create enters a new request into the respective table)
         "lines": [
           1,
           1,
@@ -385,6 +436,10 @@
         ]
       }
     },
+<<<<<<< HEAD
     "timestamp": 1636714078
+=======
+    "timestamp": 1636704069
+>>>>>>> b3570d9 (Request.create enters a new request into the respective table)
   }
 }

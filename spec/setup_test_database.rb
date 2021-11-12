@@ -5,6 +5,7 @@ def setup_test_database
   connection.exec("TRUNCATE spaces;")
   connection.exec("TRUNCATE users;")
   connection.exec("TRUNCATE availabilities;")
+  connection.exec("TRUNCATE requests;")
 end 
 
 def add_space(name, description, price, owner_id = 1)

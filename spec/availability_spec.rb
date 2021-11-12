@@ -8,7 +8,7 @@ describe Availability do
       space_id = 10
       Availability.list(from, to, space_id)
       availabilities = Availability.when(10)
-      expect(availabilities.first).to eq '2021-11-14'
+      expect(availabilities.first.date).to eq '2021-11-14'
     end
   end
   describe '.when' do
@@ -17,14 +17,18 @@ describe Availability do
       to = '2021-11-16'
       space_id = 10
       Availability.list(from, to, space_id)
-      expect(Availability.when(10)).to eq ['2021-11-14', '2021-11-15', '2021-11-16']
+      availabilities = Availability.when(10)
+      expect(availabilities[1].date).to eq '2021-11-15'
     end
     it 'does not list dates, that are already booked' do
       from = '2021-11-14'
       to = '2021-11-16'
       space_id = 10
       Availability.list(from, to, space_id)
-      expect(Availability.when(10)).to eq ['2021-11-14', '2021-11-15', '2021-11-16']
+      availabilities = Availability.when(10)
+      expect(availabilities.first).to be_a Availability 
+      expect(availabilities.first.date).to eq '2021-11-14'
+      expect(availabilities.last.date).to eq '2021-11-16'
     end
   end
 end
