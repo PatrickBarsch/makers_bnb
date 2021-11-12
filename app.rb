@@ -32,7 +32,6 @@ class MakersBnb < Sinatra::Base
 
   post '/login' do
     @user_id = User.log_in(email: params[:email], password: params[:password])
-    p @user_id
     if @user_id == nil
       @style = 'display:block'
       erb :login
