@@ -111,7 +111,7 @@ body {font-family: Verdana, sans-serif;}
             <% @space.each do |space| %>
             <h3><%= space.name %></h3><br>
             <p><%= space.description %></p><br>
-            <%end%>
+           
             </center>
             <p style="font-style:oblique;font-weight: bold;"> Pick a night:</p>
                     <div class="month">      
@@ -169,14 +169,16 @@ body {font-family: Verdana, sans-serif;}
                         </ul>
                     </div>
         <center style="margin: 2rem 0;">
-            <a class="col-2" href="#" style="text-align: end;">
+            <a class="col-2" href="/requests/<%=space.id%>" style="text-align: end;">
                 <input type='button' value='Request to Book' class="btn btn-default" >
             </a>
         </center>
+        <%end%>
     </div>  
  </div>  
 </div>  
-          
+        
+
       
 </body>
 </html>

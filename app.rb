@@ -37,7 +37,7 @@ class MakersBnb < Sinatra::Base
     Availability.list(params[:date_from], params[:date_to], new_space.first['id'])
     redirect '/spaces'
   end 
-
+ 
   get '/spaces/name' do
     'hello'
     redirect '/spaces/:name'
@@ -50,6 +50,13 @@ class MakersBnb < Sinatra::Base
     
     erb :space_id
   end 
+   # ----- Requests -----
+  get '/requests/:id' do
+    @space_list = Space.all
+    @space = @space_list.filter { |space| space.id == params[:id] }
+    @space
+    erb :requests
+  end
 
 
   run! if app_file == $0
