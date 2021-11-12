@@ -22,25 +22,59 @@
 </ul>
 
 
-<h3 class="title" style="text-align: center;margin: 4rem 17rem;"> Requests </h3>
-  
-<p class="title" style="text-align: start;margin: 4rem 17rem;"> Requests I have made </p>
-<div class="container" style="border-style: groove; padding:1.5rem; margin-bottom:2rem;">
-    <ul style="padding: 0; margin: 0">
-        <% @space.each do |space| %>
-            <li class='list-group' style="border-style: groove; padding: 1rem; margin:1rem " >
-                <h3><%= space.name %></h3><br>
-                Description:
-                <%= space.description%><br>
-                
-                    <a class="col-2" href="#" style="text-align: end;">
-                        <input type='button' value='Book this Space' class="btn btn-default" >
-                    </a>
-            </li>
-        <%end%>
-    </ul>
+<h3 class="title" style="text-align: center;margin: 3rem 0;"> Requests </h3>
+ 
+<div class="container" style="margin-bottom:1rem;">
+<div class="row">
+<div class="col">
+<p style="font-size:20px; text-align:center;"> Requests I have made </p>
 </div>
-          
+<div class="col">
+<p style="font-size:20px;text-align:center;"> Requests I have received </p>
+</div>
+</div>
+</div>
+
+
+
+<div class="container">
+<div class="row">
+<div class="col" >
+        <div class="container" style="border-style: groove; padding:1.5rem; margin-bottom:2rem;">
+            <ul style="padding: 0; margin: 0">
+                <% @space_list.each do |space| %>
+                    <li class='list-group' style="border-style: groove; padding: 1rem; margin:1rem " >
+                        <h3><%= space.name %></h3><br>
+                        Description:
+                        <%= space.description%><br>
+                            <h6 style="margin:1rem 0;text-decoration: underline;">Not Confirmed</h6>
+                            <a  href="#" >
+                                <input type='button' value='Confirmations' class="btn btn-default" >
+                            </a>
+                    </li>
+                <%end%>
+            </ul>
+        </div>
+</div>
+<div class="col">
+        <div class="container" style="border-style: groove; padding:1.5rem; margin-bottom:2rem;">
+            <ul style="padding: 0; margin: 0">
+                <% @space_list.each do |space| %>
+                    <li class='list-group' style="border-style: groove; padding: 1rem; margin:1rem " >
+                        <h3><%= space.name %></h3><br>
+                        Description:
+                        <%= space.description%><br>
+                            <h6 style="margin:1rem 0;text-decoration: underline;">Not Confirmed</h6>
+                            <a  href="#" >
+                                <input type='button' value='Confirmations' class="btn btn-default" >
+                            </a>
+                    </li>
+                <%end%>
+            </ul>
+        </div>
+</div>
+</div>
+</div>          
       
 </body>
 </html>

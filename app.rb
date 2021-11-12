@@ -57,20 +57,13 @@ class MakersBnb < Sinatra::Base
   get '/spaces/:id' do
     @space_list = Space.all
     @space = @space_list.filter { |space| space.id == params[:id] }
-    @space
-    
+    @availability = Availability.when(params[:id])
     erb :space_id
   end 
    # ----- Requests -----
-  get '/requests/:id' do
-    @space_list = Space.all
-    @space = @space_list.filter { |space| space.id == params[:id] }
-    @space
-    erb :requests
-  end
-
 
   get '/requests' do
+    @space_list = Space.all
     erb :requests
   end 
   run! if app_file == $0
