@@ -2,8 +2,11 @@ require 'sinatra/base'
 require 'pg'
 require './lib/availability'
 require './lib/space'
+require './lib/user'
 
 class MakersBnb < Sinatra::Base
+
+  enable :sessions
 
   # ----- Sign Up -----
   get '/' do 
@@ -13,6 +16,7 @@ class MakersBnb < Sinatra::Base
   
   post '/sign_up' do
     if params[:passw_new_user_first] == params[:pass_new_user_second]
+      User.sign_up(email: params[:email_new_user],password: params[:passw_new_user_first])
       redirect '/sessions/new'
     else 
       @style = 'display:block'
@@ -24,8 +28,7 @@ class MakersBnb < Sinatra::Base
     erb :login
   end
   post '/login' do
-    session[:email]= params[:email]
-    session[:password] = params[:password]
+    
      redirect '/spaces'
   end
   # ----- Book a Space -----
@@ -48,11 +51,7 @@ class MakersBnb < Sinatra::Base
     Availability.list(params[:date_from], params[:date_to], new_space.first['id'])
     redirect '/spaces'
   end 
- 
-  get '/spaces/name' do
-    'hello'
-    redirect '/spaces/:name'
-  end 
+
 
   get '/spaces/:id' do
     @space_list = Space.all
