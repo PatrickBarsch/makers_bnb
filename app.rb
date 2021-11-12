@@ -33,12 +33,12 @@ class MakersBnb < Sinatra::Base
 
   post '/login' do
     @user_id = User.log_in(email: params[:email], password: params[:password])
-    if @user_id == nil
+    if @user_id.nil?
       @style = 'display:block'
       erb :login
     else
       @style = 'display:none'
-     redirect '/spaces'
+      redirect '/spaces'
     end 
   end
   # ----- Book a Space -----
@@ -59,7 +59,6 @@ class MakersBnb < Sinatra::Base
     Availability.list(params[:date_from], params[:date_to], new_space.first['id'])
     redirect '/spaces'
   end 
-
 
   get '/spaces/:id' do
     @space_list = Space.all

@@ -21,7 +21,7 @@ class User
   def self.log_in(email:, password:)
     DatabaseConnection.setup
     result = DatabaseConnection.query("SELECT id, password FROM users WHERE email ='#{email}';")
-    user_found = result.filter {|user| BCrypt::Password.new(user['password']) == password}
+    user_found = result.filter { |user| BCrypt::Password.new(user['password']) == password }
     user_id = user_found.first['id'] unless user_found.empty?
   end 
 end
