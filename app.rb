@@ -7,23 +7,34 @@ class MakersBnb < Sinatra::Base
 
   # ----- Sign Up -----
   get '/' do 
+    @style = 'display:none'
     erb :sign_up
   end
+  
   post '/sign_up' do
-    redirect '/sessions/new'
+    if params[:passw_new_user_first] == params[:pass_new_user_second]
+      redirect '/sessions/new'
+    else 
+      @style = 'display:block'
+      erb :sign_up
+    end 
   end
   # ----- Log in -----
   get '/sessions/new' do 
     erb :login
   end
   post '/login' do
-    redirect '/spaces'
+    session[:email]= params[:email]
+    session[:password] = params[:password]
+     redirect '/spaces'
   end
   # ----- Book a Space -----
   get '/spaces' do
+    @email = session[:email]
+    @password = session[:password]
     @space_list = Space.all
     erb :spaces
-  end 
+  end
   # ----- List Space -----
   get '/spaces/new' do 
     erb :list_space
