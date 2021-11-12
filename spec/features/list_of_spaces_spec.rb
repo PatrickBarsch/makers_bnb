@@ -1,13 +1,13 @@
-feature 'Spaces' do
+feature 'Feature tests for Space' do
 
-  scenario 'See the list of spaces' do
+  scenario 'A user can see the list of spaces' do
     setup_test_database
     add_space('Space 1', 'Description 1', 80)
     visit('/spaces')
     expect(page).to have_content ('Space 1')
   end 
 
-  scenario 'Add a space' do
+  scenario 'A user can add a space' do
     setup_test_database
     visit('/spaces/new')
     fill_in :name, with: 'Cottage'

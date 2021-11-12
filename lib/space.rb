@@ -15,7 +15,12 @@ class Space
     DatabaseConnection.setup
     sql = "INSERT INTO spaces(name, description, price_per_night, owner_id)"\
           " VALUES($1, $2, $3, $4) RETURNING id, name, description, price_per_night, owner_id;"
-    DatabaseConnection.query(sql, [name, description, price_per_night, owner_id])
+    space = DatabaseConnection.query(sql, [name, description, price_per_night, owner_id])
+    space = space.first
+    Space.new(name: space['name'], 
+      description: space['description'], 
+      price_per_night: space['price_per_night'], 
+      id: space['id']) 
   end
 
   def self.all

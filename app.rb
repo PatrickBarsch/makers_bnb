@@ -45,7 +45,7 @@ class MakersBnb < Sinatra::Base
       description: params[:description],
       price_per_night: params[:price_per_night], 
       owner_id: 1)
-    Availability.list(params[:date_from], params[:date_to], new_space.first['id'])
+    Availability.list(params[:date_from], params[:date_to], new_space.id)
     redirect '/spaces'
   end 
  

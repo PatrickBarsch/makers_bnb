@@ -16,9 +16,11 @@ describe Space do
   describe '.list' do 
     it 'adds a space to the list of spaces' do
       added = Space.list(**@space1)
-      id_added = added.first['id']
+      id_added = added.id
       results = persisted_data(id: id_added, table: 'spaces')
-      expect(added.first).to eq results
+      expect(added.id).to eq results['id']
+      expect(added.price_per_night).to eq results['price_per_night'].to_i
+      expect(added.description).to eq results['description']
     end
   end
   describe '.all' do
@@ -26,7 +28,6 @@ describe Space do
       added = [Space.list(**@space1)]
       added << Space.list(**@space2)
       added << Space.list(**@space3)
-      added.map! { |result| result.first }
       space_list = Space.all
       expect(space_list.length).to eq 3
       expect(space_list.first).to be_a Space
