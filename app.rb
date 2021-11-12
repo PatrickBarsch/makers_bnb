@@ -17,6 +17,7 @@ class MakersBnb < Sinatra::Base
   post '/sign_up' do
     if params[:passw_new_user_first] == params[:pass_new_user_second]
       User.sign_up(email: params[:email_new_user],password: params[:passw_new_user_first])
+      @style = 'display:none'
       redirect '/sessions/new'
     else 
       @style = 'display:block'
@@ -31,9 +32,12 @@ class MakersBnb < Sinatra::Base
 
   post '/login' do
     @user_id = User.log_in(email: params[:email], password: params[:password])
-    if @user_id.values == []
+    p @user_id
+    if @user_id == nil
+      @style = 'display:block'
       erb :login
     else
+      @style = 'display:none'
      redirect '/spaces'
     end 
   end
