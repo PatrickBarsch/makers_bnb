@@ -11,6 +11,5 @@ feature 'List a space' do
   #   ---- To Be Changed -----
     expect(page).to have_content('Sign out')
     expect(page).to have_content('Book a Space')
-    expect(page).to have_content('List a space')
   end
 end

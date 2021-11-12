@@ -48,6 +48,11 @@ class MakersBnb < Sinatra::Base
     Availability.list(params[:date_from], params[:date_to], new_space.first['id'])
     redirect '/spaces'
   end 
+ 
+  get '/spaces/name' do
+    'hello'
+    redirect '/spaces/:name'
+  end 
 
   get '/spaces/:id' do
     @space_list = Space.all
