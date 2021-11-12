@@ -24,9 +24,9 @@ class MakersBnb < Sinatra::Base
     erb :login
   end
   post '/login' do
-    session[:email]= params[:email]
+    session[:email] = params[:email]
     session[:password] = params[:password]
-     redirect '/spaces'
+    redirect '/spaces'
   end
   # ----- Book a Space -----
   get '/spaces' do
@@ -64,10 +64,8 @@ class MakersBnb < Sinatra::Base
   get '/requests/:id' do
     @space_list = Space.all
     @space = @space_list.filter { |space| space.id == params[:id] }
-    @space
     erb :requests
   end
-
 
   get '/requests' do
     erb :requests

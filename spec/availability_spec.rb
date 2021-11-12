@@ -31,4 +31,16 @@ describe Availability do
       expect(availabilities.last.date).to eq '2021-11-16'
     end
   end
+  describe 'retreive_by_id' do 
+    it 'creates an availability object corresponding to a database entry' do 
+      from = '2021-11-14'
+      to = '2021-11-16'
+      space_id = 10
+      Availability.list(from, to, space_id)
+      availabilities = Availability.when(10)
+      retreived = Availability.retreive_by_id(id: availabilities.first.id)
+      expect(retreived.id).to eq availabilities.first.id
+      expect(retreived.date).to eq availabilities.first.date
+    end
+  end
 end
