@@ -1,0 +1,1 @@
+ALTER TABLE availabilities DROP users_ids_requested;

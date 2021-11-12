@@ -1,0 +1,2 @@
+CREATE TABLE requests(id SERIAL PRIMARY KEY, availability_id NUMERIC, requestor_id NUMERIC);
+ALTER TABLE requests ADD denied BOOLEAN NOT NULL DEFAULT FALSE;
