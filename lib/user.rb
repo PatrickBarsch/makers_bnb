@@ -18,4 +18,8 @@ class User
     User.new(id: added_user[0]["id"], email: added_user[0]["email"])
   end
 
+  def self.log_in(email:, password:)
+    DatabaseConnection.setup
+    result = DatabaseConnection.query("SELECT id FROM users WHERE email ='#{email}' AND password = '#{BCrypt::Password.create(password)}';")
+  end 
 end

@@ -28,7 +28,7 @@ class MakersBnb < Sinatra::Base
     erb :login
   end
   post '/login' do
-    
+    p User.log_in(email: params[:email], password: params[:password])
      redirect '/spaces'
   end
   # ----- Book a Space -----
