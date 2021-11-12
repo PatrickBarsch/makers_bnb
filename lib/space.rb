@@ -27,6 +27,6 @@ class Space
         price_per_night: space['price_per_night'], 
         id: space['id']) 
     end
-  end 
+  end
 
 end

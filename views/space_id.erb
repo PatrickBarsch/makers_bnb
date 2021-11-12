@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <title> Available Spaces | Makers BnB </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link active" href="/spaces">Spaces </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/requests">Requests </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/">Sign out</a>
+      </li>
+    </ul>
+    <% @space.each do |space| %>
+    <div class="container">
+      <div class="col-md-6 col-centered" style="margin: auto 17rem;">
+        <h1 class="title" style="text-align: center;"> <%= space.name %> </h1>
+          <center>
+          <%= space.description %> <br>
+          </center>
+      </div>
+    </div>
+    <form class ="forminline" method="post" action="#">
+      <div class="container" style="margin-bottom:1rem;margin-top:1rem;" >
+        <div class="row">
+          
+              <div class="col-sm">
+                  <label for="date_from">Pick a night (DD/MM/YY)</label>
+                  <input type="date" name="date_from"  class="form-control" required/>
+              </div>
+          
+              <div class="col-sm">
+                <a class="nav-link" style="text-align: end;">
+                    <input type='submit' value='Fiter by Date' class="btn btn-default" style=" margin-top:1.5rem;">
+                </a>
+              </div>
+              <a class="nav-link" href="/spaces/new"><input type='button' value='Request to book' class="btn btn-default " ></a>
+            
+        </div>
+      </div>
+    </form>
+    <%end%>
+  </body>
+</html>
+
+
