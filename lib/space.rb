@@ -27,17 +27,6 @@ class Space
         price_per_night: space['price_per_night'], 
         id: space['id']) 
     end
-  end 
-
-  # def retrieve_row(data)
-  #   DatabaseConnection.setup
-  #   result = DatabaseConnection.query("SELECT * FROM spaces WHERE id = #{data}")
-  #   result.map do |space| 
-  #     Space.new(name: space['name'], 
-  #       description: space['description'], 
-  #       price_per_night: space['price_per_night'], 
-  #       id: space['id']) 
-  #   end
-  # end 
+  end
 
 end
