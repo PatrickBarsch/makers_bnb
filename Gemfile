@@ -14,5 +14,5 @@ gem 'rubocop'
 gem 'capybara'
 gem 'pg'
 gem 'webrick'
-
+gem 'digest'
 gem "bcrypt", "~> 3.1"

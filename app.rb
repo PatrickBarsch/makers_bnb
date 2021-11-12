@@ -23,18 +23,22 @@ class MakersBnb < Sinatra::Base
       erb :sign_up
     end 
   end
+
   # ----- Log in -----
   get '/sessions/new' do 
     erb :login
   end
+
   post '/login' do
-    p User.log_in(email: params[:email], password: params[:password])
+    @user_id = User.log_in(email: params[:email], password: params[:password])
+    if @user_id.values == []
+      erb :login
+    else
      redirect '/spaces'
+    end 
   end
   # ----- Book a Space -----
   get '/spaces' do
-    @email = session[:email]
-    @password = session[:password]
     @space_list = Space.all
     erb :spaces
   end
