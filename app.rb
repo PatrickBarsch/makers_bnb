@@ -57,8 +57,7 @@ class MakersBnb < Sinatra::Base
   get '/spaces/:id' do
     @space_list = Space.all
     @space = @space_list.filter { |space| space.id == params[:id] }
-    @space
-     p @availability = Availability.when(params[:id])
+    @availability = Availability.when(params[:id])
     erb :space_id
   end 
    # ----- Requests -----
