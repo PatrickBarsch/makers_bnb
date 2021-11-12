@@ -27,6 +27,7 @@ class MakersBnb < Sinatra::Base
 
   # ----- Log in -----
   get '/sessions/new' do 
+    @style = 'display:none'
     erb :login
   end
 
