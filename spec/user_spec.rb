@@ -17,4 +17,12 @@ describe User do
       User.sign_up(email: 'test@example.com', password: 'password123')
     end
   end
+  describe 'retrieve_by_id' do
+    it 'creates a user object corresponding to a database entry' do
+      user = User.sign_up(email: 'test@example.com', password: 'notSecurePassword')
+      retreived_user = User.retrieve_by_id(id: user.id)
+      expect(retreived_user.id).to eq user.id
+      expect(retreived_user.email).to eq user.email
+    end
+  end
 end

@@ -18,4 +18,11 @@ class User
     User.new(id: added_user[0]["id"], email: added_user[0]["email"])
   end
 
+  def self.retrieve_by_id(id:)
+    DatabaseConnection.setup
+    sql = "SELECT id, email FROM users WHERE id = #{id};"
+    user_row = DatabaseConnection.query(sql)
+    User.new(id: user_row.first["id"], email: user_row.first["email"])
+  end
+
 end
